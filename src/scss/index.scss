@@ -1,0 +1,207 @@
+@use "./_reset";
+@use "./vars";
+@use "./fonts";
+
+/* BASIC SETTINGS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrains", monospace;
+  font-weight: 400;
+  font-display: swap;
+
+  background: var(--color-bg);
+  color: var(--color-black);
+
+  overflow-x: hidden !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 75px;
+  min-height: 100vh;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+.App {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.container {
+  max-width: 1120px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: inherit;
+  font-family: inherit;
+  line-height: 140%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "JetBrains", monospace;
+}
+
+a {
+  outline: none !important;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+button,
+input {
+  font-family: "JetBrains", monospace;
+}
+
+.main__block {
+  padding: 25px;
+  background: #fff;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  width: 100%;
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+    background: var(--color-blue);
+    color: #fff;
+  }
+}
+
+.main__otlad {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #d9d9d9;
+
+  font-size: 12px;
+}
+
+.answer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #d9d9d9;
+
+  form {
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+
+      input {
+        padding: 15px;
+        width: 100%;
+        border: 1px solid #d9d9d9;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+.feedback,
+.solution {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #d9d9d9;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  div {
+    border-top: 1px solid #eeeeee;
+    padding-top: 10px;
+  }
+}
+
+.instructions {
+  margin-top: 20px;
+
+  h3 {
+    text-align: center;
+  }
+
+  ol {
+    margin-left: 20px;
+    margin-top: 20px;
+
+    li {
+      list-style-type: numeric;
+    }
+  }
+
+  P {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.task {
+  margin-top: 20px;
+}
